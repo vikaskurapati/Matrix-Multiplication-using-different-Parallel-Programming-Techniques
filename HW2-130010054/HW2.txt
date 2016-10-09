@@ -1,0 +1,211 @@
+Times for OpenMP:
+Time for N = 100 is 0.00413659.
+N = 200 is 0.0438016
+N = 300 is 0.0909493
+N = 400 is 0.22626
+N = 500 is 0.471141
+N = 600 is 0.793687
+N = 700 is 1.2876
+N = 800 is 2.05946
+N = 825 is 2.31511
+N = 835 is 2.47574 (Segmentation fault where core is dumped from this where stack size is set to unlimited with the command ulimit -s unlimited in the terminal.) 
+N = 900 is 3.14909
+N = 1000 is 4.49922
+N = 1023 is 4.80863
+N = 1024 is 14.5022
+N = 2000 is 36.5787
+N = 3000 is 221.551
+N = 4000 is 351.718
+N = 5000 is 890.506
+N = 6000 is 1655.17
+N = 7000 is 2773.57
+N = 8000 is 6677.05
+N = 9000 is 9596.22
+N = 10000 is 5432.12
+
+Times for MPI:
+N = 100:
+	2 processes: 		Process 0 : 0.012347s 
+		      	  	Process 1 : 0.014136s
+	3 processes:		Process 0 : 0.010026s
+		      	  	Process 1 : 0.007950s
+				Process 2 : 0.009237s
+	4 processes:		Process 0 : 0.005599s
+				Process 1 : 0.004586s
+				Process 2 : 0.005658s
+				Process 3 : 0.005696s
+
+N = 200:
+	2 processes: 	Process 0 : 0.091140s 
+	      	  	Process 1 : 0.091142s
+	3 processes:	Process 0 : 0.103633s
+	      	  	Process 1 : 0.093600s
+					Process 2 : 0.100180s
+	4 processes:	Process 0 : 0.048630s
+					Process 1 : 0.040539s
+					Process 2 : 0.048167s
+					Process 3 : 0.047716s
+
+N = 300:
+	2 processes: 		Process 0 : 0.134562s 
+		      	  	Process 1 : 0.134570s
+	3 processes:		Process 0 : 0.126211s
+		      	  	Process 1 : 0.079448s
+				Process 2 : 0.126112s
+	4 processes:		Process 0 : 0.138887s
+				Process 1 : 0.132387s
+				Process 2 : 0.132782s
+				Process 3 : 0.138896s
+N = 400:
+	2 processes: 		Process 0 : 0.568943s 
+		      	  	Process 1 : 0.568696s
+	3 processes:		Process 0 : 0.444055s
+		      	  	Process 1 : 0.398244s
+				Process 2 : 0.444917s
+	4 processes:		Process 0 : 0.352752s
+				Process 1 : 0.335343s
+				Process 2 : 0.352337s
+				Process 3 : 0.352785s
+N = 500:
+	2 processes: 	Process 0 : 0.654782s 
+	      	  	Process 1 : 0.652934s
+	3 processes:	Process 0 : 0.577627s
+	      	  	Process 1 : 0.577082s
+			Process 2 : 0.577617s
+	4 processes:			Process 0 : 0.531235s
+					Process 1 : 0.471218s
+					Process 2 : 0.493465s
+					Process 3 : 0.531315s
+N = 600: (stack size limit reached. Stack size set to unlimited with the command ulimit -s unlimited)
+	2 processes: 		Process 0 : 1.570086s 
+		      	  	Process 1 : 1.570099s
+	3 processes:		Process 0 : 1.208811s
+		      	  	Process 1 : 1.208173s
+				Process 2 : 1.208890s
+	4 processes:			Process 0 : 0.796513s
+					Process 1 : 0.721633s
+					Process 2 : 0.768905s
+					Process 3 : 0.796193s
+N = 700:
+	2 processes: 		Process 0 : 2.782189s 
+		      	  	Process 1 : 2.781648s
+	3 processes:		Process 0 : 1.652495s
+		      	  	Process 1 : 1.563173s
+					Process 2 : 1.652594s
+	4 processes:	Process 0 : 1.453126s
+					Process 1 : 1.398319s
+					Process 2 : 1.447460s
+					Process 3 : 1.453126s
+N = 800:
+	2 processes: 	Process 0 : 4.678408s 
+		      	  	Process 1 : 4.678413s
+	3 processes:	Process 0 : 4.327710s
+		      	  	Process 1 : 4.323094s
+					Process 2 : 4.327704s
+	4 processes:	Process 0 : 3.359907s
+					Process 1 : 3.354837s
+					Process 2 : 3.359105s
+					Process 3 : 3.356146s
+N = 900:
+	2 processes: 	Process 0 : 3.895529s 
+		      	  	Process 1 : 3.895612s
+	3 processes:	Process 0 : 3.550738s
+		      	  	Process 1 : 3.463522s
+					Process 2 : 3.550823s
+	4 processes:	Process 0 : 2.954919s
+					Process 1 : 2.699644s
+					Process 2 : 2.946320s
+					Process 3 : 2.953534s
+N = 1000:
+	2 processes: 	Process 0 : 5.023535s 
+		      	  	Process 1 : 5.023517s
+	3 processes:	Process 0 : 4.546520s
+		      	  	Process 1 : 4.545353s
+					Process 2 : 4.547102s
+	4 processes:	Process 0 : 3.368455s
+					Process 1 : 3.363565s
+					Process 2 : 3.363749s
+					Process 3 : 3.368337s
+N = 2000:
+	2 processes: 	Process 0 : 49.571565s 
+		      	  	Process 1 : 49.571564s
+	3 processes:	Process 0 : 78.014890s
+		      	  	Process 1 : 78.005753s
+					Process 2 : 78.014590s
+	4 processes:	Process 0 : 75.331407s
+					Process 1 : 64.589443s
+					Process 2 : 72.670592s
+					Process 3 : 75.330728s
+N = 3000:
+	2 processes: 	Process 0 : 142.815265s 
+		      	  	Process 1 : 142.815270s
+	3 processes:	Process 0 : 134.150321s
+		      	  	Process 1 : 112.361175s
+					Process 2 : 134.150215s
+	4 processes:	Process 0 : 115.619665s
+					Process 1 : 115.564968s
+					Process 2 : 115.596714s
+					Process 3 : 115.619666s
+N = 4000:
+	2 processes: 	Process 0 : 457.985251s 
+		      	  	Process 1 : 457.985245s
+	3 processes:	Process 0 : 385.763258s
+		      	  	Process 1 : 359.650220s
+					Process 2 : 385.763267s
+	4 processes:	Process 0 : 341.656072s
+					Process 1 : 336.099547s
+					Process 2 : 336.142118s
+					Process 3 : 341.656072s
+N = 5000:
+	2 processes: 	Process 0 : 1297.509881s 
+		      	  	Process 1 : 1297.509882s
+	4 processes:	Process 0 : 585.734151s
+					Process 1 : 580.344159s
+					Process 2 : 580.427999s
+					Process 3 : 585.734223s
+N = 6000: (pc isn't responding for below 4 processes)
+	4 processes:	Process 0 : 1358.580720s
+					Process 1 : 983.521311s
+					Process 2 : 992.305415s
+					Process 3 : 1358.580624s
+N = 7000:
+	4 processes:	Process 0 : 3299.097468s
+					Process 1 : 1764.127238s
+					Process 2 : 2422.604875s
+					Process 3 : 3299.097441s
+N = 8000:
+	4 processes:	Process 0 : 8758.5904265s
+					Process 1 : 5965.393194s
+					Process 2 : 8186.899675s
+					Process 3 : 8758.590419
+N = 10000:
+	4 processes:	Process 0 : 20008.904860s
+					Process 1 : 18605.480809s
+					Process 2 : 19907.624519s
+					Process 3 : 20008.903921s
+
+System Configuration:
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                4
+On-line CPU(s) list:   0-3
+Thread(s) per core:    2
+Core(s) per socket:    2
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 69
+Model name:            Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
+Stepping:              1
+CPU MHz:               2300.000
+CPU max MHz:           2600.0000
+CPU min MHz:           800.0000
+BogoMIPS:              4589.50
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              3072K
+NUMA node0 CPU(s):     0-3

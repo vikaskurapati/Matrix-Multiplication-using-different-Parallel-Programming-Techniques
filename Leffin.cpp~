@@ -1,0 +1,62 @@
+#include <iostream>
+//#include <stdlib.h>
+//#include <math.h>
+#include <omp.h>
+//#include "mpi.h"
+using namespace std;
+//int main ( int argc, char **argv)
+int main ()
+{
+//	MPI_Init(&argc, &argv);
+
+	int N;
+	cout<<"Value of N? ";
+	cin>>N;
+	float A[N][N];
+	float B[N][N];
+	float C[N][N];
+	int i,j,k;
+	double start, end;
+//	start = MPI_Wtime();
+	start=omp_get_wtime();
+                 /* Set initial guess to 0 */
+	#pragma omp parallel shared (A,B,C,N) private (i,j,k)
+	
+	for(i=0;i<N;i++)
+    {
+    	for(j=0;j<N;j++)
+    	{
+    		A[i][j]=i+j+2;
+    		B[i][j]=(i+1)*(j+1);
+    		
+    	}
+    }
+    #pragma omp for
+	for (i =0; i<N; i++)
+	{
+		for (j = 0; j < N; j++)
+		{
+			C[i][j] = 0;
+			for (k = 0; k <N; k++)
+			{
+				C[i][j] = C[i][j] + A[i][k]*B[k][j];
+			}
+		}
+	}
+/*
+    for(i=0;i<N;i++)
+    {
+    	for(j=0;j<N;j++)
+    	{
+    		cout<< C[i][j] << " ";
+
+    	}
+    	cout<< endl;
+    }
+*/
+//	end=MPI_Wtime();
+    end=omp_get_wtime();
+	cout<<"Time taken is " <<(end-start)<< endl;
+//	MPI_Finalize();
+	return 0;
+}
